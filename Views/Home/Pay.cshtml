@@ -1,0 +1,9 @@
+﻿@model Pay
+<body onload="msg()">
+</body>
+<script>
+    function msg() {
+        alert("Đặt hàng thành công.");
+        window.location.href = "/Home/DeleteFromCart?User=@Model.IDKH&id=@Model.IDMH";
+    }
+</script>

@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ShoesMVC
+build_property.RootNamespace = ShoesMVC
+build_property.ProjectDir = C:\Users\admin\Desktop\Done\Công nghệ web\TL_CNWeb_20CN3_Nhom2\ShoesMVC\ShoesMVC\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\admin\Desktop\Done\Công nghệ web\TL_CNWeb_20CN3_Nhom2\ShoesMVC\ShoesMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/AddToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRUb0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/DeleteFromCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVGcm9tQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/Pay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Home/ProductsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0c1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Seller/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Seller/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Seller/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Seller/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE9yZGVyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Seller/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE9yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/Done/Công nghệ web/TL_CNWeb_20CN3_Nhom2/ShoesMVC/ShoesMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j00o1yecff

@@ -1,0 +1,40 @@
+﻿@model ShoesMVC.Models.Seller.OrderDetail
+<br />
+<br />
+<br />
+@{
+    var product = Model.product;
+    var customer = Model.customer;
+}
+<body>
+    <table class="table">
+        <tr>
+            <th>Thông tin khách hàng</th>
+            <th>Thông tin mặt hàng</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>@customer.FirstName @customer.LastName</li>
+                    <li>Số điện thoại: @customer.PhoneNumber</li>
+                </ul>
+            </td>
+            <td>
+                <ul style="list-style-type: none;">
+                    <li><img src="@product.HinhAnh" style="width: 300px; height:auto;" /></li>
+                    <li>Mã mặt hàng: @product.Id</li>
+                    <li>Tên mặt hàng: @product.Ten</li>
+                    <li>Nhãn hiệu: @product.NhanHieu</li>
+                    <li>Số lượng: @Model.SoLuong</li>
+                    <li>Tồn kho: @product.TonKho</li>
+                    <li>Mô tả: @product.MoTa</li>
+                    <li>Giá: @product.Gia</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="justify-content:right;">Tổng: @Model.ThanhTien đ</td>
+        </tr>
+    </table>
+</body>

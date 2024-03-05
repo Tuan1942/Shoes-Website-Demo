@@ -1,0 +1,240 @@
+﻿@model DetailPageModel
+@{
+    ViewData["Title"] = "Detail";
+    var productId = Model.ProductID;
+    var item = Model.product;
+}
+<input type="hidden" name="id" value="@productId" />
+<br />
+<br />
+<br />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoesMVC</title>
+    <style>
+        /* Reset CSS */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+        }
+
+            .product img {
+                width: 40%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+        .product-details {
+            flex: 1;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-info, .product-price, .product-size, .product-quantity {
+            margin-bottom: 20px;
+        }
+
+        .product-price {
+            font-size: 36px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .product-size span, .product-quantity span {
+            margin: 0 10px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .navContent {
+            display: flex;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+            .navContent button {
+                background-color: #fff;
+                color: #000;
+                padding: 10px 20px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                margin: 0;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .navContent button:hover {
+                    background-color: #f0f0f0;
+                }
+
+                .navContent button.active {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-item {
+            margin-bottom: 5px;
+        }
+
+            .footer-item a {
+                text-decoration: none;
+                color: #333;
+            }
+
+                .footer-item a:hover {
+                    text-decoration: underline;
+                }
+
+        .footer-icons a {
+            margin-right: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product">
+        <img src="@item.HinhAnh"
+             alt="GIÀY 17">
+        <div class="product-details">
+            <h2 class="product-title">@item.Ten</h2>
+            <p class="product-info">Nhãn hiệu: @item.NhanHieu | Tồn kho: @item.TonKho</p>
+            <p class="product-info">Mô tả: @item.MoTa</p>
+            <p class="product-price">@item.Gia ₫</p>
+            <div class="product-size">
+                Size:
+                <span>36.5</span>
+                <span>39</span>
+                <span>40</span>
+                <span>41</span>
+                <span>42</span>
+                <span>43</span>
+            </div>
+            <div class="product-quantity">
+                Số lượng:
+                @if (Model.RoleID == "1") // Seller
+                {
+                    <button>-</button>
+                    <span id="numDisplay">1</span>
+                    <button>+</button>
+                }
+                else // Customer or no user found
+                {
+                    if (Model.UserID != "") // Customer
+                    {
+                        <button onclick="decrease()">-</button>
+                        <span id="numDisplay">1</span>
+                        <button onclick="increase()">+</button>
+                    }
+                    else // No user found
+                    {
+                        <button>-</button>
+                        <span id="numDisplay">1</span>
+                        <button>+</button>
+                    }
+                }
+            </div>
+            @if (Model.RoleID != "1")
+            {
+                if (Model.UserID != "")
+                {
+                    <a id="AddToCart" class="btn btn-outline-secondary" href="/Home/AddToCart?Id=@item.Id&Num=1">THÊM VÀO GIỎ</a>
+                    <a class="btn btn-outline-light" href="/Seller/Delete?Id=@item.Id">MUA NGAY</a>
+                }
+                else
+                {
+                    <a id="AddToCart" class="btn btn-outline-secondary" href="/Identity/Account/Login">THÊM VÀO GIỎ</a>
+                    <a class="btn btn-outline-light" href="/Identity/Account/Login">MUA NGAY</a>
+                }
+            }
+            else
+            {
+                <a class="btn btn-outline-primary" href="/Seller/Edit?Id=@item.Id">Sửa</a>
+                <a class="btn btn-outline-danger" href="/Seller/Delete?Id=@item.Id">Xoá</a>
+            }
+        </div>
+    </div>
+    <script>
+        var num = 1;
+        function increase()
+        {
+            if (num < 5)
+            {
+                num += 1; 
+                updateNumDisplay();
+            }
+        }
+        function decrease()
+        {
+            if (num > 1)
+            {
+                num -= 1;
+                updateNumDisplay();
+            }
+        }
+        function updateNumDisplay() {
+            var numDisplay = document.getElementById("numDisplay");
+            var Link = document.getElementById("AddToCart");
+            numDisplay.innerHTML = num; 
+            var url = "/Home/AddToCart?Id=@item.Id&num=" + num;
+            Link.setAttribute("href", url);
+        }
+    </script>
+
+
+</body>
+

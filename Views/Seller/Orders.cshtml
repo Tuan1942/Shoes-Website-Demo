@@ -1,0 +1,57 @@
+﻿@model ShoesMVC.Models.Seller.Orders
+<br />
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    @{
+        var rowCount = 0;
+    }
+    @foreach (var item in Model.CustomerList)
+    {
+        rowCount += 1;
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>
+                <button onclick="toggleRow('row-@rowCount')">Danh sách đơn hàng</button>
+            </td>
+        </tr>
+        <tr id="row-@rowCount" class="carousel-inner" style="display:none">
+            <td>
+                @if (item.CustomerOrders.Any())
+                {
+                    <ul>
+                        @foreach (var order in item.CustomerOrders)
+                        {
+                            <li><a href="OrderDetail?id=@order">Đơn hàng @order</a></li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Không có đơn hàng.</p>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<script>
+    function toggleRow(rowId) {
+        var row = document.getElementById(rowId);
+        if (row.style.display === "none" || row.style.display === "") {
+            row.style.display = "table-row";
+        } else {
+            row.style.display = "none";
+        }
+    }
+</script>

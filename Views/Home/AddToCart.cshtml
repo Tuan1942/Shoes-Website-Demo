@@ -1,0 +1,10 @@
+﻿@model AddToCart
+@using Microsoft.Data.SqlClient;
+<body onload="msg()">
+</body>
+<script>
+    function msg() {
+        alert("Thêm vào giỏ hàng thành công.");
+        window.location.href = "Detail?id=@Model.product.Id";
+    }
+</script>

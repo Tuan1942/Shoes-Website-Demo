@@ -1,0 +1,58 @@
+﻿@model Payment
+@{
+}
+<br />
+<br />
+<br />
+<body>
+    <table class="table">
+        <tr>
+            <th>Sản phẩm</th>
+            <th></th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="@Model.product.HinhAnh" />
+            </td>
+            <td>@Model.product.Ten</td>
+            <td>@Model.product.Gia</td>
+            <td>@Model.product.SoLuong</td>
+            <td>@Model.TotalPrice.ToString("N0")</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                @if (Model.GetPhoneNumber(Model.UserID) == true)
+                {
+                    <a class="btn btn-outline-primary" href="/Home/Pay?IDKH=@Model.UserID&IDMH=@Model.product.Id&SoLuong=@Model.product.SoLuong&ThanhTien=@Model.TotalPrice">
+                        Đặt hàng
+                    </a>
+                }
+                else
+                {
+                    <a class="btn btn-outline-primary" href="/Identity/Account/Manage">
+                        Đặt hàng
+                    </a>
+                }
+            </td>
+        </tr>
+    </table>
+</body>
+<style>
+    img {
+        width: auto;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .container {
+        width: 1000px;
+        margin: auto;
+        transition: 0.5s;
+    }
+</style>

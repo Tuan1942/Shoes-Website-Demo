@@ -1,0 +1,261 @@
+﻿@model Home
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="./js/site.js"></script>
+
+<style>
+
+    img {
+        width: 100%;
+    }
+
+    h4 {
+        padding: 20px;
+    }
+
+    #new,
+    #campus,
+    #low,
+    #brand {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .shoes {
+        position: relative;
+        background-color: #f5f5f5;
+        height: 300px;
+    }
+
+    .discount {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        background-color: rgba(255, 216, 64, 0.94);
+        border-top-right-radius: 2px;
+    }
+
+    .like {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 4px;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .shoes > a {
+        text-align: center;
+        text-decoration: none;
+        color: #222;
+    }
+
+    .brand > a {
+        text-align: center;
+        text-decoration: none;
+        color: #222;
+    }
+
+    .style_img {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+        .style_img p {
+            position: absolute;
+            top: 45%;
+            left: 70%;
+            font-size: 28px;
+            color: black;
+            letter-spacing: 0.15rem;
+        }
+
+    .shoes-image {
+    }
+
+</style>
+@{
+    var itemlist1 = Model.list1;
+    var itemlist2 = Model.list2;
+    var itemlist3 = Model.list3;
+    var itemlistNew = Model.listNew;
+}
+<body>
+    <br />
+    <br />
+    <br />
+    <div class="style_img">
+        <p>The best choice</p>
+        <img src="https://pics.clipartpng.com/idownload-image.php?file=Grey_Men_Sport_Shoe_PNG_Clipart-494.png" style="width: 40%; margin-right: 40%" />
+    </div>
+    <div>
+        @* Giày mới *@
+        <div class="row">
+            <h4>Sản phẩm mới</h4>
+            <div id="new">
+                @for (int i = 0; i < itemlistNew.Count; i++)
+                {
+                    <div class="col-sm-3 m-1">
+                        <div class="shoes">
+                            <a href="/Home/Detail?id=@itemlistNew[i].Id">
+                                <img class="shoes-image" src="@itemlistNew[i].HinhAnh" />
+                                <p class="shoes-name">@itemlistNew[i].Ten </p>
+                                <p class="shoes-price">@itemlistNew[i].Gia đ</p>
+                            </a>
+                            <div class="like">
+                                <i class="heart fa-regular fa-heart"></i>
+                            </div>
+                            <div class="discount">New</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        @* Giày Campus *@
+        <div class="row">
+            <h4>Adidas</h4>
+            <div id="campus">
+                @for (int i = 0; i < itemlist1.Count; i++)
+                {
+                    <div class="col-sm-3 m-1">
+                        <div class="shoes">
+                            <a href="/Home/Detail?id=@itemlist1[i].Id">
+                                <img class="shoes-image" src="@itemlist1[i].HinhAnh" />
+                                <p class="shoes-name">@itemlist1[i].Ten </p>
+                                <p class="shoes-price">@itemlist1[i].Gia</p>
+                            </a>
+                            <div class="like">
+                                <i class="heart fa-regular fa-heart"></i>
+                            </div>
+                            <div class="discount">-10%</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        @* Giày cổ thấp *@
+        <div class="row">
+            <h4>Nike Dunk Low</h4>
+            <div id="low">
+                @for (int i = 0; i < itemlist2.Count; i++)
+                {
+                    <div class="col-sm-3 m-1">
+                        <div class="shoes">
+                            <a href="/Home/Detail?id=@itemlist2[i].Id">
+                                <img class="shoes-image" src="@itemlist2[i].HinhAnh" />
+                                <p class="shoes-name">@itemlist2[i].Ten </p>
+                                <p class="shoes-price">@itemlist2[i].Gia</p>
+                            </a>
+                            <div class="like">
+                                <i class="heart fa-regular fa-heart"></i>
+                            </div>
+                            <div class="discount">-15%</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        @* Nhãn hiệu *@
+        <div class="row">
+            <h4>Nhãn hiệu nổi bật</h4>
+            <div id="brand">
+                <div class="col-3 m-1">
+                    <div class="brand">
+                        <a href="/Home/ProductsPage?id=Nike">
+                            <img src="./css/images/brand_01.jpg" />
+                            <h4>Nike</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3 m-1">
+                    <div class="brand">
+                        <a href="/Home/ProductsPage?id=Air Jordan">
+                            <img src="./css/images/brand_02.jpg" />
+                            <h4>Air Jordan</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3 m-1">
+                    <div class="brand">
+                        <a href="/Home/ProductsPage?id=Adidas">
+                            <img src="./css/images/brand_03.jpg" />
+                            <h4>Adidas</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3 m-1">
+                    <div class="brand">
+                        <a href="#">
+                            <img src="./css/images/brand_04.jpg" />
+                            <h4>New Balance</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <div class="text-center" style="width: 50%; margin: 0 auto; background: rgba(0,0,0,0.05); padding: 8px;">
+        <h4>Đăng ký để nhận thông tin</h4>
+        <p>Để lại email để cập nhật những thông tin mới cùng với ưu đãi vô cùng hấp dẫn</p>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nhập email của bạn" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="send btn btn-outline-secondary" type="button">Gửi</button>
+            </div>
+        </div>
+    </div>
+    <p class="text text-center"></p>
+    <script>
+        var btn = document.querySelector('.send');
+        var inputText = document.querySelector('input[type="text"]');
+        var text = document.querySelector('.text');
+        var emailCheck = /^[^\s\(\)\<\>\,\;\:\\\/\"\[\]]+[^\s\(\)\<\>\,\;\:\\\/\"\[\]]+\.[^\s\(\)\<\>\,\;\:\\\/\"\[\]]+$/;
+
+        var like = document.querySelectorAll('.like');
+        var heart = document.querySelector('.heart');
+
+        like.forEach((h) => {
+            h.addEventListener('click', () => {
+                h.querySelector('.heart').classList.toggle('red');
+            });
+        });
+
+        btn.addEventListener('click', () => {
+            if (inputText.value != "") {
+                if (emailCheck.test(inputText.value)) {
+                    text.innerHTML = "Gửi thành công!"
+                    inputText.value = "";
+                    text.classList.add('text-success');
+                    text.classList.remove('text-warning');
+                }
+                else {
+                    text.innerHTML = "Vui lòng nhập đúng định dạng email!"
+                    text.classList.add('text-warning');
+                }
+            }
+            else {
+                text.innerHTML = "Vui lòng nhập địa chỉ email của bạn!"
+                text.classList.add('text-warning');
+            }
+            setTimeout(() => {
+                text.innerHTML = "";
+                text.classList.remove('text-success');
+                text.classList.remove('text-warning');
+            }, 2000);
+        })
+    </script>
+</body>
+
+

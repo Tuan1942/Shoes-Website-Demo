@@ -1,0 +1,56 @@
+﻿@model ShoesMVC.Models.Seller.Edit
+<br />
+<br />
+<br />
+@using (Html.BeginForm("Edit", "Seller", FormMethod.Post))
+{
+    <div class="input-group" style="display: none">
+        @Html.LabelFor(m => Model.product.Id)
+        @Html.TextBoxFor(m => Model.product.Id)
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.Ten, "Tên sản phẩm")
+        @Html.TextBoxFor(m => Model.product.Ten)
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.NhanHieu, "Nhãn hiệu")
+        @Html.TextBoxFor(m => Model.product.NhanHieu)
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.TonKho, "Tồn kho")
+        @Html.TextBoxFor(m => Model.product.TonKho, new { type = "number" })
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.MoTa, "Mô tả")
+        @Html.TextBoxFor(m => Model.product.MoTa)
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.Gia, "Giá")
+        @Html.TextBoxFor(m => Model.product.Gia, new { type = "number", step = "1000", min = "0" })
+    </div>
+    <div class="input-group">
+        @Html.LabelFor(m => Model.product.HinhAnh, "Hình ảnh (Link)")
+        @Html.TextBoxFor(m => Model.product.HinhAnh)
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Home/Detail?Id=@Model.product.Id" role="button">Huỷ</a>
+        </div>
+    </div>
+}
+<style>
+    label{
+        width: 200px
+    }
+
+    .input-group{
+        margin-bottom: 10px;
+    }
+
+    input{
+        width: 300px;
+    }
+</style>
